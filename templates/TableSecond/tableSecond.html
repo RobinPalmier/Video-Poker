@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo Poker</title>
+    <link rel= "stylesheet" type= "text/css" href="{{ url_for('static',filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static',filename='img/favicon.png') }}" type="image/png" />
+</head>
+<body>
+    <header>
+        <div class="left-side">
+            <img class="logo" src="{{ url_for('static',filename='img/logo.png') }}" alt="video-poker-python-flask-header" />
+        </div>
+        <p class="username">Bon jeu <span>{{ session["username"] }}</span> !</p>
+        <div class="right-side">
+            <div class="content-bankroll">
+                <p>{{ session["bankroll"] }} €</p>
+                <img class="bankroll-bag" src="{{ url_for('static',filename='img/bankroll.svg') }}" alt="bankroll-bag-video-poker-icon" />
+            </div>
+        </div>
+    </header>
+    <div class="content-global">
+        {% if session["success"] %}
+            <div class="resultat success">{{ session["message"] }}</div>
+        {% else %}
+            <div class="resultat failed">{{ session["message"] }}</div>
+        {% endif %}
+        <div class="content-card">
+            {% for card in second_tirage %}
+                <img 
+                    class="card back" 
+                    data-card="{{card}}"
+                    src="{{ url_for('static',filename='img/cartes/'+card+'.png') }}" 
+                    alt="card-back-video-poker-final" 
+                />
+            {% endfor %}
+        </div>
+        <button class="button-start" onclick="replay()">Rejouer</button>
+    </div>
+    <script src="{{ url_for('static',filename='script.js') }}"></script>
+</body>
+</html>
