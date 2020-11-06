@@ -2,11 +2,11 @@
 ### *Projet casino réalisé en Python*
 
 ---
-#### Languages used :
+#### Langages utilisés :
 * Python
 
 ---
-#### Get Started : &nbsp;
+#### Lancer le projet : &nbsp;
 - Initialiser venv : ``python3 -m venv venv``
 - Activer venv : ``. venv/bin/activate``
 - Installer Pandas : ``pip install pandas``
