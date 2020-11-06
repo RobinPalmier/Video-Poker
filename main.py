@@ -4,9 +4,11 @@ import random
 import sys
 sys.path.insert(0, '/functions')
 from functions import f
+from threading import Timer
 from deck import deck
 
 app = Flask(__name__)
+Timer(1, f.open_browser).start();
 app.secret_key = "AZERTY1234"
 
 @app.route('/')

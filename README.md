@@ -7,13 +7,8 @@
 
 ---
 #### Lancer le projet : &nbsp;
-- Initialiser venv : ``python3 -m venv venv``
-- Activer venv : ``. venv/bin/activate``
-- Installer Pandas : ``pip install pandas``
-- Installer Flask : ``pip install flask``
-- Pour lancer l'app : ``FLASK_APP=main.py FLASK_ENV=development flask run``
-- Ouvrir sur : ``localhost:5000``
-
+- Executer la commande ``bash install.sh`` (si il s'agit de la première fois)
+- Executer la commande ``bash launcher.sh`` pour lancer le projet (si vous avez déjà installer les dépendances)
 ---
 #### URL API : &nbsp;
 ``http://localhost:5000/api/``
